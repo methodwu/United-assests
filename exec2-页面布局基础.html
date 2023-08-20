@@ -2,396 +2,6 @@
 <html>
 <head>
 	<title>exec2</title>
-	<style type="text/css">
-		*{
-			box-sizing: border-box;
-			margin: 0px;
-			padding: 0px;
-		}
-		body{
-			min-width: 1000px;
-			font-family: sans-serif;
-			background-color:#f3f3f3;
-		}
-		div.banner{
-			height: 520px;
-			width: 100%;
-			background-image: url('./images/banner.png');
-			background-size: cover;
-		}
-		ul{
-			text-align: right;
-			list-style-type: none;
-			margin: 0 auto;
-			max-width: 1280px;
-			padding: 0px;
-			height: 80px;
-		}
-		li{
-			display: inline;
-			color: white;
-			line-height: 80px;
-			height: 80px;
-			padding-right: 35px;
-			font-size: 15px;
-			cursor: pointer;
-		}
-		li:hover{
-			color: #987741;
-		}
-		div.one{
-			background-color: rgba(0,0,0,0.6);
-			position: sticky;
-			top: 0px;
-		}
-		img.logo{
-			float: left;
-			height: 38px;
-			width: 164px;
-			margin-left: 20px;
-			margin-top: 21px;
-			cursor: pointer;
-		}
-		div.banner p.one{
-			color: white;
-			text-align: center;
-			margin-top: 130px;
-			margin-bottom: 0px;
-			font-size: 40px;
-		}
-		div.banner p.two{
-			color: white;
-			text-align: center;
-			margin-top: 42px;
-			font-size: 27px;
-		}
-		p.three{
-			color: #987741;
-			text-align: center;
-			margin: 61px auto;
-			width: 140px;
-			font-size: 21px;
-			border-style: solid;
-			border-width: 1px;
-			border-color: #987741;
-			padding:12px;
-			cursor: pointer;
-			transition: all 0.6s;
-		}
-		p.three:hover{
-			border-color:#ebbc20;
-			color:#ebbc20;
-			transform: scale(1.15);	
-		}
-		div.two{
-			padding:40px;
-		}
-		div.two>div{
-			position: relative;
-			max-width: 1200px;
-			margin:0 auto;
-			height: 300px;
-		}
-		div.news div.more{
-			position: absolute;
-			left: 0px;
-			right: 400px;
-			height: 300px;
-			width: auto;
-			background-image: url('./images/news.png');
-			background-size: auto 100%;
-			background-repeat: no-repeat;
-			background-position: center center;
-			transition: all 0.5s;
-		}
-		div.discription div.more{
-			position: absolute;
-			right: 0px;
-			left: 400px;
-			height: 300px;
-			width: auto;
-			background-image: url('./images/news.png');
-			background-size: auto 100%;
-			background-repeat: no-repeat;
-			background-position: center center;
-			transition: all 0.5s;
-		}
-		div.products div.more{
-			position: absolute;
-			left: 0px;
-			right: 400px;
-			height: 300px;
-			width: auto;
-			background-image: url('./images/news.png');
-			background-size: auto 100%;
-			background-repeat: no-repeat;
-			background-position: center center;
-			transition: all 0.5s;
-		}
-		div.two div.more:hover{
-			background-size: auto 110%;
-		}
-		div.more div{
-			position: absolute;
-			height: 100%;
-			width: 100%;
-			padding: 65px;
-			opacity: 0;
-			transition: background-color 0.5s;
-		}
-		div.more div:hover{
-			background-color: rgba(0,0,0,0.6);
-			opacity: 1;
-		}
-		div.two div.text{
-			position: absolute;
-			right: 0px;
-			z-index: 1;
-			background-color: white;
-			width: 400px;
-			height: 300px;
-			transition: width 0.5s;
-		}
-		div.two div.text:hover{
-			width: 420px;
-		}
-		div.text div{
-			width: 400px;
-			height: 300px;
-			margin-left: auto;
-			margin-right: 0px;
-			padding-right: 54px;
-			padding-left: 42px;
-			transition: transform 0.5s;
-		}
-		div.text div:hover{
-			transform: scale(1.1,1.1);
-		}
-		div.two p.title{
-			font-size: 23px;
-			padding-bottom: 16px;
-		}
-	 	div.two p.content{
-			font-size: 13px;
-			line-height: 24px;
-			font-weight: lighter;
-			width: 302px;
-		}
-		div.two p.more{
-			color: #987741;
-			font-size: 15px;
-			line-height: 32px;
-			font-weight: lighter;
-		}
-		div.three{
-			font-size: 0px;
-			max-width: 1280px;
-			min-width: 1000px;
-			width: auto;
-			margin: 0px auto;
-		}
-		div.three .a{
-			position: relative;
-			background-image: url('./images/img1.png');
-			background-size: cover;
-			background-position: center;
-			height: 260px;
-			width: 50%;
-			display: inline-block;
-		}
-		div.three .b{
-			position: relative;
-			background-image: url('./images/img2.png');
-			background-size: cover;
-			background-position: center;
-			height: 260px;
-			width: 50%;
-			display: inline-block;
-		}
-		div.three .c{
-			position: relative;
-			background-image: url('./images/img3.png');
-			background-size: cover;
-			background-position: center;
-			height: 260px;
-			width: 30%;
-			display: inline-block;
-		}
-		div.three .d{
-			position: relative;
-			background-image: url('./images/img4.png');
-			background-size: cover;
-			background-position: center;
-			height: 260px;
-			width: 30%;
-			display: inline-block;
-		}
-		div.three .e{
-			position: relative;
-			background-image: url('./images/img5.png');
-			background-size: cover;
-			background-position: center;
-			height: 260px;
-			width: 40%;
-			display: inline-block;
-		}
-		div.three p.three{
-			margin: 107px auto;
-		}
-		div.three>div>div{
-			position: absolute;
-			height: 100%;
-			width: 100%;
-			opacity: 0;
-			padding-right: 640px;
-			transition: all 0.5s;
-		}
-		div.three>div>div:hover{
-			background-color:rgba(0,0,0,0.6);
-			opacity: 1;
-			padding-right: 0px;
-			animation: more_move 0.5s;
-		}
-		@keyframes more_move{
-			from{padding-right: 640px;}
-			to{padding-right: 0px;}
-		}
-		div.three p.text{
-			position: absolute;
-			color: white;
-			font-size: 22px;
-			left: 31px;
-			bottom: 22px;
-		}
-		div.four{
-			padding:40px;
-		}
-		table{
-			width: auto;
-			max-width: 1200px;
-			margin:0 auto;
-			border-collapse: collapse;
-			background-color: #999999;
-		}
-		td{
-			position: relative;
-			height: 240px;
-			width: 400px;
-			text-align: center;
-			border:none;
-			background-color: white;
-		}
-		td div.image1{
-			height: 100%;
-			background-image: url('./images/m1.png');
-			background-size: cover;
-			transition: all 0.5s;
-		}
-		td div.image1:hover{
-			transform: translate(0,-5px);
-			border: solid 1px #987741;
-			box-shadow: 0px 5px 9px #999999;
-		}
-		td div.image2{
-			height: 100%;
-			background-image: url('./images/m2.png');
-			background-size: cover;
-			transition: all 0.5s;
-		}
-		td div.image2:hover{
-			transform: translate(0,5px);
-			border: solid 1px #987741;
-			box-shadow: 0px 5px 9px #999999;
-		}
-		td div.image4{
-			height: 100%;
-			background-image: url('./images/m4.png');
-			background-size: cover;
-			transition: all 0.5s;
-		}
-		td div.image4:hover{
-			transform: translate(0,-5px);
-			border: solid 1px #987741;
-			box-shadow: 0px 5px 9px #999999;
-		}
-		.triangle{
-			position: absolute;
-			z-index: 1;
-			top: -20px;
-			left: 180px;
-			width: 0px;
-			height: 0px;
-			border-style: solid;
-			border-width: 0px 20px 21px;
-			border-color: transparent transparent white;
-			margin-left: auto;
-			margin-right: auto;
-		}
-		.triangle_up{
-			position: absolute;
-			z-index: 1;
-			bottom: -20px;
-			left: 180px;
-			width: 0px;
-			height: 0px;
-			border-style: solid;
-			border-width: 20px 21px 0px;
-			border-color: white transparent transparent;
-		}
-		td p.title{
-			font-size: 22px;
-			margin-bottom: 10px;
-		}
-		td p.content{
-			padding-right: 68px;
-			padding-left: 68px;
-			font-size: 12px;
-			line-height: 24px;
-		}
-		td p.more{
-			font-size: 15px;
-			line-height: 32px;
-			color: #d0ad70;
-		}
-		div.five{
-			height: 500px;
-			width: 100%;
-			background-image: url('./images/bg.png');
-			background-size: cover;
-			padding-top: 97px;
-		}
-		div.five div{
-			background-image: url('./images/bg1.png');
-			background-size: contain;
-			margin-left: 200px;
-			width: 310px;
-			height: 310px;
-			text-align: center;
-		}
-		div.five p{
-			white-space: pre;
-			color: white;
-			font-size: 31px;
-			padding: 110px 102px;
-			line-height: 48px;
-		}
-		div.six{
-			height: 80px;
-			width: 100%;
-			background-color: #333333;
-			color: white;
-			text-align: center;
-			padding-top: 12px;
-		}
-		div.six p{
-			white-space: pre;
-			font-size: 12px;
-			line-height: 30px;
-		}
-		div.six span{
-			cursor: pointer;
-		}
-	</style>
 </head>
 <body>
 	<div class="banner">
@@ -400,7 +10,14 @@
 			<img class="logo" src="./images/logo.png">
 				<li style="color:#987741;">首页</li>
 				<li>关于我们</li>
-				<li>项目投资</li>
+				<li class="dropdown">
+					<a href="#" class="dropbtn">项目投资</a>
+					<div class="dropdown-content">
+					  <a href="#">项目1</a>
+					  <a href="#">项目2</a>
+					  <a href="#">项目3</a>
+					</div>
+				  </li>
 				<li>旗下基金</li>
 				<li>管理团队</li>
 				<li>资讯中心</li>
@@ -533,6 +150,457 @@
 	</div>
 </body>
 </html>
+
+<script>
+	// JavaScript代码，用于控制下拉菜单的显示和隐藏
+	var dropdowns = document.getElementsByClassName("dropdown");
+	var i;
+
+	for (i = 0; i < dropdowns.length; i++) {
+	dropdowns[i].addEventListener("mouseenter", function() {
+		this.getElementsByClassName("dropdown-content")[0].style.display = "block";
+	});
+	
+	dropdowns[i].addEventListener("mouseleave", function() {
+		this.getElementsByClassName("dropdown-content")[0].style.display = "none";
+	});
+	}
+</script>
+
+<style type="text/css">
+	*{
+		box-sizing: border-box;
+		margin: 0px;
+		padding: 0px;
+	}
+	body{
+		min-width: 1000px;
+		font-family: sans-serif;
+		background-color:#f3f3f3;
+	}
+	div.banner{
+		height: 520px;
+		width: 100%;
+		background-image: url('./images/banner.png');
+		background-size: cover;
+	}
+	ul{
+		text-align: right;
+		list-style-type: none;
+		margin: 0 auto;
+		max-width: 1280px;
+		padding: 0px;
+		height: 80px;
+	}
+	li{
+		display: inline;
+		color: white;
+		line-height: 80px;
+		height: 80px;
+		padding-right: 35px;
+		font-size: 15px;
+		cursor: pointer;
+	}
+	li:hover{
+		color: #987741;
+	}
+	/* 下拉菜单样式 */
+	.dropdown {
+    position: relative;
+  	}
+  
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		z-index: 1;
+		background-color: rgba(0,0,0,0.6);
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		margin-top: -30px;
+		right: -10px;
+		text-align: left;
+	}
+  
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+
+	.dropbtn:hover{
+		color: #987741;
+	}
+	
+	.dropbtn {
+		color: white;
+		font-size: 15px;
+		border: none;
+		cursor: pointer;
+		background-color: transparent;
+		text-decoration:none;
+	}
+  
+	.dropdown-content a {
+		color: white;
+		text-decoration: none;
+		display: block;
+		padding-inline-start: 20px;
+	}
+  
+	.dropdown-content a:hover {
+		color: #987741;
+	}
+	div.one{
+		background-color: rgba(0,0,0,0.6);
+		position: sticky;
+		top: 0px;
+	}
+	img.logo{
+		float: left;
+		height: 38px;
+		width: 164px;
+		margin-left: 20px;
+		margin-top: 21px;
+		cursor: pointer;
+	}
+	div.banner p.one{
+		color: white;
+		text-align: center;
+		margin-top: 130px;
+		margin-bottom: 0px;
+		font-size: 40px;
+	}
+	div.banner p.two{
+		color: white;
+		text-align: center;
+		margin-top: 42px;
+		font-size: 27px;
+	}
+	p.three{
+		color: #987741;
+		text-align: center;
+		margin: 61px auto;
+		width: 140px;
+		font-size: 21px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: #987741;
+		padding:12px;
+		cursor: pointer;
+		transition: all 0.6s;
+	}
+	p.three:hover{
+		border-color:#ebbc20;
+		color:#ebbc20;
+		transform: scale(1.15);	
+	}
+	div.two{
+		padding:40px;
+	}
+	div.two>div{
+		position: relative;
+		max-width: 1200px;
+		margin:0 auto;
+		height: 300px;
+	}
+	div.news div.more{
+		position: absolute;
+		left: 0px;
+		right: 400px;
+		height: 300px;
+		width: auto;
+		background-image: url('./images/news.png');
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		transition: all 0.5s;
+	}
+	div.discription div.more{
+		position: absolute;
+		right: 0px;
+		left: 400px;
+		height: 300px;
+		width: auto;
+		background-image: url('./images/news.png');
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		transition: all 0.5s;
+	}
+	div.products div.more{
+		position: absolute;
+		left: 0px;
+		right: 400px;
+		height: 300px;
+		width: auto;
+		background-image: url('./images/news.png');
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		transition: all 0.5s;
+	}
+	div.two div.more:hover{
+		background-size: auto 110%;
+	}
+	div.more div{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		padding: 65px;
+		opacity: 0;
+		transition: background-color 0.5s;
+	}
+	div.more div:hover{
+		background-color: rgba(0,0,0,0.6);
+		opacity: 1;
+	}
+	div.two div.text{
+		position: absolute;
+		right: 0px;
+		z-index: 1;
+		background-color: white;
+		width: 400px;
+		height: 300px;
+		transition: width 0.5s;
+	}
+	div.two div.text:hover{
+		width: 420px;
+	}
+	div.text div{
+		width: 400px;
+		height: 300px;
+		margin-left: auto;
+		margin-right: 0px;
+		padding-right: 54px;
+		padding-left: 42px;
+		transition: transform 0.5s;
+	}
+	div.text div:hover{
+		transform: scale(1.1,1.1);
+	}
+	div.two p.title{
+		font-size: 23px;
+		padding-bottom: 16px;
+	}
+	 div.two p.content{
+		font-size: 13px;
+		line-height: 24px;
+		font-weight: lighter;
+		width: 302px;
+	}
+	div.two p.more{
+		color: #987741;
+		font-size: 15px;
+		line-height: 32px;
+		font-weight: lighter;
+	}
+	div.three{
+		font-size: 0px;
+		max-width: 1280px;
+		min-width: 1000px;
+		width: auto;
+		margin: 0px auto;
+	}
+	div.three .a{
+		position: relative;
+		background-image: url('./images/img1.png');
+		background-size: cover;
+		background-position: center;
+		height: 260px;
+		width: 50%;
+		display: inline-block;
+	}
+	div.three .b{
+		position: relative;
+		background-image: url('./images/img2.png');
+		background-size: cover;
+		background-position: center;
+		height: 260px;
+		width: 50%;
+		display: inline-block;
+	}
+	div.three .c{
+		position: relative;
+		background-image: url('./images/img3.png');
+		background-size: cover;
+		background-position: center;
+		height: 260px;
+		width: 30%;
+		display: inline-block;
+	}
+	div.three .d{
+		position: relative;
+		background-image: url('./images/img4.png');
+		background-size: cover;
+		background-position: center;
+		height: 260px;
+		width: 30%;
+		display: inline-block;
+	}
+	div.three .e{
+		position: relative;
+		background-image: url('./images/img5.png');
+		background-size: cover;
+		background-position: center;
+		height: 260px;
+		width: 40%;
+		display: inline-block;
+	}
+	div.three p.three{
+		margin: 107px auto;
+	}
+	div.three>div>div{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		padding-right: 640px;
+		transition: all 0.5s;
+	}
+	div.three>div>div:hover{
+		background-color:rgba(0,0,0,0.6);
+		opacity: 1;
+		padding-right: 0px;
+		animation: more_move 0.5s;
+	}
+	@keyframes more_move{
+		from{padding-right: 640px;}
+		to{padding-right: 0px;}
+	}
+	div.three p.text{
+		position: absolute;
+		color: white;
+		font-size: 22px;
+		left: 31px;
+		bottom: 22px;
+	}
+	div.four{
+		padding:40px;
+	}
+	table{
+		width: auto;
+		max-width: 1200px;
+		margin:0 auto;
+		border-collapse: collapse;
+		background-color: #999999;
+	}
+	td{
+		position: relative;
+		height: 240px;
+		width: 400px;
+		text-align: center;
+		border:none;
+		background-color: white;
+	}
+	td div.image1{
+		height: 100%;
+		background-image: url('./images/m1.png');
+		background-size: cover;
+		transition: all 0.5s;
+	}
+	td div.image1:hover{
+		transform: translate(0,-5px);
+		border: solid 1px #987741;
+		box-shadow: 0px 5px 9px #999999;
+	}
+	td div.image2{
+		height: 100%;
+		background-image: url('./images/m2.png');
+		background-size: cover;
+		transition: all 0.5s;
+	}
+	td div.image2:hover{
+		transform: translate(0,5px);
+		border: solid 1px #987741;
+		box-shadow: 0px 5px 9px #999999;
+	}
+	td div.image4{
+		height: 100%;
+		background-image: url('./images/m4.png');
+		background-size: cover;
+		transition: all 0.5s;
+	}
+	td div.image4:hover{
+		transform: translate(0,-5px);
+		border: solid 1px #987741;
+		box-shadow: 0px 5px 9px #999999;
+	}
+	.triangle{
+		position: absolute;
+		z-index: 1;
+		top: -20px;
+		left: 180px;
+		width: 0px;
+		height: 0px;
+		border-style: solid;
+		border-width: 0px 20px 21px;
+		border-color: transparent transparent white;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.triangle_up{
+		position: absolute;
+		z-index: 1;
+		bottom: -20px;
+		left: 180px;
+		width: 0px;
+		height: 0px;
+		border-style: solid;
+		border-width: 20px 21px 0px;
+		border-color: white transparent transparent;
+	}
+	td p.title{
+		font-size: 22px;
+		margin-bottom: 10px;
+	}
+	td p.content{
+		padding-right: 68px;
+		padding-left: 68px;
+		font-size: 12px;
+		line-height: 24px;
+	}
+	td p.more{
+		font-size: 15px;
+		line-height: 32px;
+		color: #d0ad70;
+	}
+	div.five{
+		height: 500px;
+		width: 100%;
+		background-image: url('./images/bg.png');
+		background-size: cover;
+		padding-top: 97px;
+	}
+	div.five div{
+		background-image: url('./images/bg1.png');
+		background-size: contain;
+		margin-left: 200px;
+		width: 310px;
+		height: 310px;
+		text-align: center;
+	}
+	div.five p{
+		white-space: pre;
+		color: white;
+		font-size: 31px;
+		padding: 110px 102px;
+		line-height: 48px;
+	}
+	div.six{
+		height: 80px;
+		width: 100%;
+		background-color: #333333;
+		color: white;
+		text-align: center;
+		padding-top: 12px;
+	}
+	div.six p{
+		white-space: pre;
+		font-size: 12px;
+		line-height: 30px;
+	}
+	div.six span{
+		cursor: pointer;
+	}
+</style>
 
 
 
