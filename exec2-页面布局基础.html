@@ -4,39 +4,39 @@
 	<title>exec2</title>
 </head>
 <body>
+	<div class="one">
+		<ul>
+		<img class="logo" src="./images/logo.png">
+			<li style="color:#987741;">首页</li>
+			<li>关于我们</li>
+			<li class="dropdown">
+				<a href="#" class="dropbtn">项目投资</a>
+				<div class="dropdown-content">
+				  <a href="#">项目1</a>
+				  <a href="#">项目2</a>
+				  <a href="#">项目3</a>
+				</div>
+			</li>
+			<li class="dropdown">
+				<a href="#" class="dropbtn">旗下基金</a>
+				<div class="dropdown-content">
+					<a href="#">基金1</a>
+					<a href="#">基金2</a>
+					<a href="#">基金3</a>
+					<a href="#">基金4</a>
+				</div>
+			</li>
+			<li class="dropdown">
+				<a href="#" class="dropbtn">管理团队</a>
+				<div class="dropdown-content">
+					<a href="#">团队1</a>
+					<a href="#">团队2</a>
+			</li>
+			<li>资讯中心</li>
+			<li style="padding-right: 100px;">联系我们</li>
+		</ul>
+	</div>
 	<div class="banner">
-		<div class="one">
-			<ul>
-			<img class="logo" src="./images/logo.png">
-				<li style="color:#987741;">首页</li>
-				<li>关于我们</li>
-				<li class="dropdown">
-					<a href="#" class="dropbtn">项目投资</a>
-					<div class="dropdown-content">
-					  <a href="#">项目1</a>
-					  <a href="#">项目2</a>
-					  <a href="#">项目3</a>
-					</div>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropbtn">旗下基金</a>
-					<div class="dropdown-content">
-						<a href="#">基金1</a>
-						<a href="#">基金2</a>
-						<a href="#">基金3</a>
-						<a href="#">基金4</a>
-					</div>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropbtn">管理团队</a>
-					<div class="dropdown-content">
-						<a href="#">团队1</a>
-						<a href="#">团队2</a>
-				</li>
-				<li>资讯中心</li>
-				<li style="padding-right: 100px;">联系我们</li>
-			</ul>
-		</div>
 		<p class="one">UNITED ASSET MANAGEMENT</p>
 		<p class="two">走进联合资产</p>
 		<p class="three">了解更多</p>
@@ -265,7 +265,9 @@
 		background-color: rgba(0,0,0,0.6);
 		position: sticky;
 		top: 0px;
+		z-index: 1;
 	}
+	
 	img.logo{
 		float: left;
 		height: 38px;
@@ -277,8 +279,7 @@
 	div.banner p.one{
 		color: white;
 		text-align: center;
-		margin-top: 130px;
-		margin-bottom: 0px;
+		padding-top: 100px;
 		font-size: 40px;
 	}
 	div.banner p.two{
@@ -579,6 +580,11 @@
 		font-size: 15px;
 		line-height: 32px;
 		color: #d0ad70;
+	}
+	td p.more:hover{
+		text-decoration: underline;
+		text-underline-offset:5px;
+		cursor: pointer;
 	}
 	div.five{
 		height: 500px;
