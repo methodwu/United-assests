@@ -9,7 +9,7 @@
 		<img class="logo" src="./images/logo.png">
 			<li style="color:#987741;">首页</li>
 			<li>关于我们</li>
-			<li class="dropdown">
+			<li class="dropdown" onclick="toggleDropdown(this)">
 				<a href="#" class="dropbtn">项目投资</a>
 				<div class="dropdown-content">
 				  <a href="#">项目1</a>
@@ -17,7 +17,7 @@
 				  <a href="#">项目3</a>
 				</div>
 			</li>
-			<li class="dropdown">
+			<li class="dropdown" onclick="toggleDropdown(this)">
 				<a href="#" class="dropbtn">旗下基金</a>
 				<div class="dropdown-content">
 					<a href="#">基金1</a>
@@ -26,7 +26,7 @@
 					<a href="#">基金4</a>
 				</div>
 			</li>
-			<li class="dropdown">
+			<li class="dropdown" onclick="toggleDropdown(this)">
 				<a href="#" class="dropbtn">管理团队</a>
 				<div class="dropdown-content">
 					<a href="#">团队1</a>
@@ -165,18 +165,15 @@
 </html>
 
 <script>
-	// JavaScript代码，用于控制下拉菜单的显示和隐藏
-	var dropdowns = document.getElementsByClassName("dropdown");
-	var i;
-
-	for (i = 0; i < dropdowns.length; i++) {
-	dropdowns[i].addEventListener("mouseenter", function() {
-		this.getElementsByClassName("dropdown-content")[0].style.display = "block";
-	});
-	
-	dropdowns[i].addEventListener("mouseleave", function() {
-		this.getElementsByClassName("dropdown-content")[0].style.display = "none";
-	});
+	function toggleDropdown(dropdown) {
+	var content = dropdown.getElementsByClassName("dropdown-content")[0];
+	if (content.style.display === "block") {
+		content.style.display = "none";
+		dropdown.classList.remove("active");
+	} else {
+		content.style.display = "block";
+		dropdown.classList.add("active");
+	}
 	}
 </script>
 
@@ -224,13 +221,13 @@
   
 	.dropdown-content {
 		display: none;
-		position: absolute;
-		z-index: 2;
+		position: fixed;
+		z-index: 3;
+		top: 80px;
+		left: 0;
+		width: 100%;
+		height: calc(100% - 80px);
 		background-color: rgba(0,0,0,0.6);
-		min-width: 160px;
-		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-		margin-top: -30px;
-		right: -60px;
 		text-align: left;
 	}
   
@@ -394,7 +391,7 @@
 		font-size: 23px;
 		padding-bottom: 16px;
 	}
-	 div.two p.content{
+	div.two p.content{
 		font-size: 13px;
 		line-height: 24px;
 		font-weight: lighter;
